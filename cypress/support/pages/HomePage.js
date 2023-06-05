@@ -1,11 +1,11 @@
 class HomePage {
     visit(){
-        cy.visit('https://automationteststore.com')
+        cy.log('Open website home page');
+        cy.visit('https://automationteststore.com/');
     }
 
-    getLoginOrRegister(){
-        return cy.get(`a`).contains(`Login or register`)
+    getLoginOrRegisterButton(){
+        return cy.contains('a', 'Login or register');
     }
 }
-
 export default new HomePage();
