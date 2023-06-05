@@ -54,7 +54,7 @@ describe ('Registration and authorization tests', () => {
   })
 
 
-  it.only (`Authorization`, () => {
+  it (`Authorization`, () => {
 
     cy.get(`#loginFrm_loginname`).type(user.username);
     cy.get(`#loginFrm_password`).type(user.password);
