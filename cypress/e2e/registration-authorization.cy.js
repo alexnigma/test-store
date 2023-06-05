@@ -13,8 +13,8 @@ describe ('Registration and authorization tests', () => {
 
 
   // Test Data:
-  let email = `someemail111222333@email.com`; // need to change every run
-  let login = `Looogin111222333`; // need to change every run
+  let email = `Tes234234234t@maul.com`; // need to change every run
+  let login = `Tewer4234222467`; // need to change every run
 
   let password = `Loooginchickpassword`;
   let firstName = `Test`;
