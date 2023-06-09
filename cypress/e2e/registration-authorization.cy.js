@@ -1,3 +1,5 @@
+import user from "../fixtures/user.json"
+
 describe ('Registration and authorization tests', () => {
 
   beforeEach (() =>{
@@ -12,19 +14,19 @@ describe ('Registration and authorization tests', () => {
   })
 
 
-  // Test Data:
-  let email = `Tes234234234t@maul.com`; // need to change every run
-  let login = `Tewer4234222467`; // need to change every run
-
-  let password = `Loooginchickpassword`;
-  let firstName = `Test`;
-  let lastName = `Test`;
-  let phone = `7991034433`;
-  let adress1 = `Milky Way, planet Earth`;
-  let city = `Chornobil`;
-  let countryId = `220`; // Ukraine
-  let regionId = `3490`; // Kyiv
-  let postCode = `18500`;
+  // // Test Data:
+  // let email = `Tes234234234t@maul.com`; // need to change every run
+  // let login = `Tewer4234222467`; // need to change every run
+  //
+  // let password = `Loooginchickpassword`;
+  // let firstName = `Test`;
+  // let lastName = `Test`;
+  // let phone = `7991034433`;
+  // let adress1 = `Milky Way, planet Earth`;
+  // let city = `Chornobil`;
+  // let countryId = `220`; // Ukraine
+  // let regionId = `3490`; // Kyiv
+  // let postCode = `18500`;
 
 
   it ('Registration', () => {
@@ -54,8 +56,8 @@ describe ('Registration and authorization tests', () => {
 
   it (`Authorization`, () => {
 
-    cy.get(`#loginFrm_loginname`).type(`${login}`);
-    cy.get(`#loginFrm_password`).type(`${password}`);
+    cy.get(`#loginFrm_loginname`).type(user.username);
+    cy.get(`#loginFrm_password`).type(user.password);
     cy.get(`[title="Login"]`).click();
     cy.get(`.maintext`).should(`contain.text`, ` My Account`);
 
