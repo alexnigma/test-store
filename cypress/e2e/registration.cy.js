@@ -47,7 +47,7 @@ it('Registration', {retries: 2}, () => {
 
 })
 
-it.skip('Authorization', () => {
+it('Authorization', () => {
 
   cy.log('Open website login page');
   cy.visit('/index.php?rt=account/login');

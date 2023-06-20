@@ -5,7 +5,7 @@ class LoginPage {
     }
 
     getLoginField(){
-        return cy.get('#loginFrm_loginname');
+        return cy.get('#loginFrm_loginname111');
     }
 
     getPasswordField(){

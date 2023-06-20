@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-18T11:50:00.409Z",
+    "end": "2023-06-18T11:50:11.473Z",
+    "duration": 11064,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9693b4ad-cde5-43b4-9e30-74f24471c4d1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\registration.cy.js",
+      "file": "cypress\\e2e\\registration.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Registration",
+          "fullTitle": "Registration",
+          "timedOut": null,
+          "duration": 9747,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('/');\ncy.get('.topnavbar [data-id=\"menu_account\"]').click();\ncy.get('#accountFrm button').click();\ncy.get('#AccountFrm_firstname').type(_user.default.firstName);\ncy.get('#AccountFrm_lastname').type(_user.default.lastName);\ncy.get('#AccountFrm_email').type(_user.default.email);\ncy.get('#AccountFrm_address_1').type(_user.default.address);\ncy.get('#AccountFrm_city').type(_user.default.city);\ncy.get('#AccountFrm_postcode').type(_user.default.postCode);\ncy.get('#AccountFrm_country_id').select(_user.default.countryId);\ncy.get('#AccountFrm_loginname').type(_user.default.username);\ncy.get('#AccountFrm_password').type(_user.default.password);\ncy.get('#AccountFrm_confirm').type(_user.default.password);\ncy.get('#AccountFrm_zone_id').select(_user.default.zone);\ncy.get('#AccountFrm_newsletter0').check();\ncy.get('#AccountFrm_agree').check();\ncy.get('button[title=\"Continue\"]').click();\ncy.get('#maincontainer').contains(_user.default.firstName).should('exist');\ncy.clearAllCookies();\n(0, _login.login)(_user.default);",
+          "err": {},
+          "uuid": "02af4ce2-0f54-4e50-a829-3a859f4f6dd3",
+          "parentUUID": "9693b4ad-cde5-43b4-9e30-74f24471c4d1",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Authorization",
+          "fullTitle": "Authorization",
+          "timedOut": null,
+          "duration": 1284,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.log('Open website login page');\ncy.visit('/index.php?rt=account/login');\ncy.log('Check user is unauthorized');\ncy.getCookie('customer').should('be.null');\ncy.log('Authorize user');\ncy.get('#loginFrm_loginname').type(_user.default.username);\ncy.get('#loginFrm_password').type(_user.default.password);\ncy.get('button[type=\"submit\"]').contains('Login').click();",
+          "err": {},
+          "uuid": "d6393607-c0cc-4b04-ac81-9163457f54b9",
+          "parentUUID": "9693b4ad-cde5-43b4-9e30-74f24471c4d1",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "02af4ce2-0f54-4e50-a829-3a859f4f6dd3",
+        "d6393607-c0cc-4b04-ac81-9163457f54b9"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 11031,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

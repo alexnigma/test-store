@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-06-18T11:49:39.058Z",
+    "end": "2023-06-18T11:49:39.068Z",
+    "duration": 10,
+    "testsRegistered": 1,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b6962dd-c176-406c-8566-b2b16b22979f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\buy-helper-test.cy.js",
+      "file": "cypress\\e2e\\buy-helper-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Search product test",
+          "fullTitle": "Search product test",
+          "timedOut": null,
+          "duration": 0,
+          "state": "pending",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": true,
+          "context": null,
+          "code": "(0, _buyProduct.buyProduct)(`Nail Lacq45uer`);",
+          "err": {},
+          "uuid": "2964487f-b680-4970-9572-8444be57982f",
+          "parentUUID": "7b6962dd-c176-406c-8566-b2b16b22979f",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [],
+      "pending": [
+        "2964487f-b680-4970-9572-8444be57982f"
+      ],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

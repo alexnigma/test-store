@@ -29,7 +29,7 @@ describe ('Registration and authorization tests', () => {
   // let postCode = `18500`;
 
 
-  it ('Registration', () => {
+  it.skip ('Registration', () => {
 
     cy.get(`[title="Continue"]`).click();
     cy.get(`#AccountFrm_firstname`).type(`${firstName}`).should(`contain.value`, `${firstName}`);
@@ -54,7 +54,7 @@ describe ('Registration and authorization tests', () => {
   })
 
 
-  it (`Authorization`, () => {
+  it.skip (`Authorization`, () => {
 
     cy.get(`#loginFrm_loginname`).type(user.username);
     cy.get(`#loginFrm_password`).type(user.password);
